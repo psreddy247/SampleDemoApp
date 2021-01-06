@@ -10,13 +10,14 @@ phases:
   build:
     commands:
       - java -version
-      - mvn clean
       - mvn package
+      - mv target/spring-mvc-example.war spring-mvc-example.war
   post_build:
     commands:
       - echo $CODEBUILD_SRC_DIR
       - echo Build completed on `date`
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'target/'
+    - spring-mvc-example.war
+    - .ebextensions/**/*
+  base-directory: 'target/spring-mvc-example'

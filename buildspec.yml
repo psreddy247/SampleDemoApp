@@ -11,6 +11,7 @@ phases:
     commands:
       - java -version
       - mvn package
+      - ls target
       - mv target/spring-mvc-example.war spring-mvc-example.war
   post_build:
     commands:

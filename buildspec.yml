@@ -22,4 +22,3 @@ artifacts:
   files:
     - spring-mvc-example.war
     - .ebextensions/**/*
-  base-directory: 'target/spring-mvc-example'

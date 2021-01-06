@@ -13,10 +13,12 @@ phases:
       - mvn package
       - ls target
       - mv target/spring-mvc-example.war spring-mvc-example.war
+      - ls
   post_build:
     commands:
       - echo $CODEBUILD_SRC_DIR
       - echo Build completed on `date`
+      - ls
 artifacts:
   files:
     - spring-mvc-example.war

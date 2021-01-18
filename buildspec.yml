@@ -10,12 +10,11 @@ phases:
   build:
     commands:
       - java -version
-      - mvn test
       - mvn package
-      - ls target
-      - mv target/spring-mvc-example.war spring-mvc-example.war
   post_build:
     commands:
+      - ls target
+      - mv target/spring-mvc-example.war spring-mvc-example.war
       - echo Build completed on `date`
       - ls
 artifacts:

@@ -3,20 +3,19 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: openjdk8
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
       - java -version
-  post_build:
-    commands:
       - mvn test
       - mvn package
       - ls target
       - mv target/spring-mvc-example.war spring-mvc-example.war
-      - echo $CODEBUILD_SRC_DIR
+  post_build:
+    commands:
       - echo Build completed on `date`
       - ls
 artifacts:

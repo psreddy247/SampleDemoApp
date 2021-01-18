@@ -9,7 +9,7 @@
 <body>
 	<h1>Hello world!</h1>
 
-	<P>Application up and running</p>
+	<P>Application up and running after code change with codepipeline</p>
 
 	<form action="user" method="post">
 		<input type="text" name="userName"><br> <input
